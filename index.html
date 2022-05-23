@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./imagenes/Mi_guia_eco-removebg-preview.png"/>
+
+    <title>Mi guia Eco</title>
+    <!-- linkeo el archivo de estilos -->
+    <link rel="stylesheet" href="/estilos.css" />
+    <script src="https://kit.fontawesome.com/6119e1c3e1.js" crossorigin="anonymous"></script> <!--iconos redes sociales-->
+  </head>
+
+  <body>
+    <header>          
+        <!-- Logo arriba izq-->
+      <nav class="navbar">        
+         <div class="logo"><a href="./index.html"><img
+          src="./imagenes/Mi guia eco.png"
+          alt="productos naturales varios en frascos de vidrio y bolsas de tela"
+          height="80"
+          class="logo"
+        /></a></div>
+        
+        <!--Barra de navegacion -->
+        <ul class="nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Inicio</a> <!--me devuelve a la página principal poniendo la /-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mapa">Ubicación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./tips eco.html">Eco Tips/Shop</a> <!--esto se lo llama LINKS RELATIVO: porq sin importar en q dominio estén son relativos al documento actual y siempre van a funcionar, los otros son ABSOLUTOS: cuando se coloca toda la direccion de la pág web si esta se mueve tendríamos q cambiar todo el link por completo-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contacto</a> <!--esto se lo llama LINKS RELATIVO: porq sin importar en q dominio estén son relativos al documento actual y siempre van a funcionar, los otros son ABSOLUTOS: cuando se coloca toda la direccion de la pág web si esta se mueve tendríamos q cambiar todo el link por completo-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#acercade">Nosotros</a> 
+            <li class="nav-item">
+              <a class="nav-link" href="formulario.html">Formulario</a>
+            </li>
+          </li>
+        </ul>
+      </nav>
+      <!--div: se usa para agrupar elementos, justify p q centre los contenidos en el eje x, align en el eje y y flex-column p q se pongan uno abajo del otro-->
+      <div class="cover">
+        <h1 class="title">
+          Mi guia Eco
+        </h1>
+        <br>
+        <p>
+          La mejor guía de tips y productos ecológicos
+        </p>
+      </div>
+    </header>
+  
+    <!--Presentacion de la empresa-->
+    <section>
+      <div class="containerA InfoEm" id="acercade">
+        <img
+          src="./imagenes/rsz_noah-buscher-x8zstuks2pm-unsplash.jpg"
+          alt="dos manos agarrando una plantita"
+          height="250"
+          class="imagen"
+        />
+        <div class="texto"> 
+          <h2>Un poco sobre la empresa...</h2>
+           <br>
+           <p>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+             rhoncus elit nisi. Nam vulputate lorem eget cursus dictum. Suspendisse
+             accumsan gravida justo, in mattis libero rutrum porta. Pellentesque
+             habitant morbi tristique senectus et netus et malesuada fames ac
+             turpis egestas. Phasellus id euismod turpis. Morbi molestie magna sed
+             diam accumsan rutrum. Pellentesque habitant morbi tristique senectus
+             et netus et malesuada fames ac turpis egestas. Nulla ac tortor
+             vulputate, ultrices lectus ac, egestas lacus. In sit amet sapien et
+             libero auctor consequat at vel diam. In ultrices malesuada augue. In
+             convallis ante in mauris cursus, eget ultrices arcu pharetra.
+           </p>
+      </div>
+       
+      </div>
+    </section>
+    
+<!--SLIDER CON FOTOS-ANIMACION-->
+    <section>
+      <div class="containerB centrate">
+        <div class="slider">
+          <div class="slider-container">
+            <div
+              class="image-container"
+              style="
+                background-image: url(./imagenes/rsz_gareth-hubbard-z_fl2kybrm0-unsplash.jpg);
+              "
+              title="cocina con alacena llena de productos orgánicos en frascos de vidrio"
+            ></div>
+
+            <div
+              class="image-container"
+              style="
+                background-image: url(./imagenes/rsz_dan-cristian-padure-miyzdphuyy0-unsplash.jpg);
+              "
+              title="frutas y verduras orgánicas sobre una mesa"
+            ></div>
+
+            <div
+              class="image-container"
+              style="
+                background-image: url(./imagenes/rsz_shawnee-wilborn-tmt-m2zecrc-unsplash.jpg);
+              "
+              title="productos cero-waste para el cuidado de la piel"
+            ></div>
+
+            <div
+              class="image-container"
+              style="
+                background-image: url(./imagenes/rsz_maddi-bazzocco-tozquhd8l38-unsplash.jpg);
+              "
+              title="bañera con velas y productos naturales para bañarse"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section>
+        <div class="row">
+         <p></p>
+        </div> 
+        
+        <!--Eco shop y Eco tips-->
+        <!--    CARDS   -->
+    <section>
+      <div class="containerC" id="ECO">
+          <!--pongo la card adentro de container p q quede una separación mas prolija.-->
+          <!--card Eco tips-->
+            <div class="card">
+                <img class="imagen-card" src="./imagenes/rsz_priscilla-du-preez-L3lznpRPZbI-unsplash.jpg"  alt="Card imagen" >
+                <!--acá podemos sobreescribir y decir que la url que queremos es la de la imagen 3 de la maq de afeitar-->
+              <div class="card-body">
+                <h3 class="card-title">Eco Tips</h3>
+                <p class="card-text">
+                  Los mejores consejos y tips que harán tu estilo de vida más
+                  ecológico.
+                </p>
+                <a href="./tips eco.html" class="btn">Visitar</a>
+              </div>
+            </div>
+
+          <!--card eco-shop-->
+            <div class="card">
+              <img class="imagen-card" src="./imagenes/rsz_nacho-fernandez-quxbqxvgipa-unsplash.jpg"  alt="Card imagen" >
+              <div class="card-body">
+                <h3 class="card-title">Eco Shop</h3>
+                <p class="card-text">
+                  Tienda ecológica, encontrarás las mejores marcas para comprar
+                  productos.
+                </p>
+                <a href="./tips eco.html" class="btn">Visitar</a>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!--COLOCO EL MAPA-->
+    <div class="containerD" id="mapa"> <!--existe un tipo de LINK q es con identificadores (id) y dentro de mi misma pag web en por ej "ir al mapa" o "ubicacion " uso ese identificador: #mapa-->
+      <h3>
+        Te esperamos en:
+      </h3>
+      <br>
+      <p>
+        Av. Francia 1000-902, B1661BPW, B1661BPW Bella Vista, Provincia de
+        Buenos Aires.
+      </p>
+      <br>
+      <div class="responsive-iframe"> <!--p solucionar el problema de q se acomode el mapa según el tamaño de la pantalla-->    
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6570.977293788218!2d-58.68568444325563!3d-34.56650035776501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbc3612d29edb%3A0x312dcac6902ac434!2sCorredor%20Aerobico%20Bella%20Vista!5e0!3m2!1ses!2sar!4v1622743917458!5m2!1ses!2sar" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+
+      <!--PRESENTACION DEL EQUIPO-->
+      <section>
+        <div class="equipo">
+          <h2>Conoce al equipo</h2>
+          <br>
+          <p>Juntos hacemos que tu dia mejore del modo más ecológico posible</p>
+          <div class="containerF">
+              <div class="cardA">
+                <!--al poner inline-block, cambio el display por este va a ser mas facil centrar este elemento -->
+                <div
+                  class="avatar"
+                  style="
+                    background-image: url(https://cdn.glitch.com/5af3e49d-8e32-43d7-b550-d37aae4808f2%2Frsz_sandra-gabriel-c32ivg-m2ew-unsplash.jpg?v=1623092994770);
+                  "
+                ></div>
+                <h4 class="card-title texto">MarBihu - CEO</h4>
+              </div>
+            
+              <div class="cardA">
+                <!--al poner inline-block, cambio el display por este va a ser mas facil centrar este elemento si colocamos text-center acá-->
+                <div
+                  class="avatar"
+                  style="
+                    background-image: url(https://cdn.glitch.com/5af3e49d-8e32-43d7-b550-d37aae4808f2%2Frsz_jason-moyer-imkynljk9je-unsplash.jpg?v=1623092993688);
+                  "
+                ></div>
+                <h4 class="card-title texto">JLM - Product Managt.</h4>
+              </div>
+  
+              <div class="cardA">
+                <!--al poner inline-block, cambio el display por este va a ser mas facil centrar este elemento si colocamos text-center acá-->
+                <div
+                  class="avatar"
+                  style="
+                    background-image: url(https://cdn.glitch.com/5af3e49d-8e32-43d7-b550-d37aae4808f2%2Frsz_img-20171019-wa0013.jpg?v=1623104526818);
+                  "
+                ></div>
+                <h4 class="card-title texto">Nina - Quality manager</h4>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!--LINKS DE CONTACTO-->
+      <section id="contact" class="contact-section">
+        <div class="contact-links">
+          <a id="profile-link" href="https://github.com/AnaLuMarzo" target="_blank" class="btn contact-details"><i class="fab fa-github"></i>GitHub</a>
+          <a href="https://www.instagram.com/analumarzo/" target="_blank" class="btn contact-details"><i class="fab fa-instagram-square"></i>Instagram</a>
+          <a href="mailto:almarzocca@gmail.com" target="_blank" class="btn contact-details"><i class="fas fa-at"></i>Email</a>
+        </div>
+      </section>
+  </body>
+<br>
+  <footer>
+    <p>Derechos reservados 2022-Ana Lucia Marzocca</p>
+  </footer>
+  <br>
+</html>

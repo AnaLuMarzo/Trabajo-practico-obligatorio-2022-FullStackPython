@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost:wght@700&display=swap');
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 20px;/*le puse 20x porq se veia muy chico el título; se pone 16px o 100%, 100%-->16px.*/
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; /*para sacarle los margenes y paddings q vienen en html por defecto*/  
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif; /*fuente elegida en googlefonts*/
+} 
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: fixed; /*dejo el menu fijo mientras navego en la pag*/
+  background-color: rgb(129, 188, 177);
+  text-align: center;
+  z-index: 10; /*lo tuve que poner porq se iba abajo de las fotos*/
+  width: 100%; /*p q abarque toda la pag*/
+}
+.logo{
+  margin: 0.1rem 0 0 0.3rem;
+}
+.navbar a {
+  color: aliceblue;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(129, 188, 177)
+}
+.nav a:hover {
+  color: rgb(82, 29, 84);
+}
+
+ul{
+  list-style-type: none;
+  margin: 1.6rem;
+  padding: 0;
+}
+
+li{
+  display: inline;
+  float:inline-end;
+  margin: 1rem;
+}
+
+h1, h5{
+  font-family: 'Jost', sans-serif; 
+}
+
+p{
+  font-size: 0.9rem;
+}
+
+/*es una caja de 400px es el titulo principal*/
+.cover {
+  display: grid;
+  place-items: center;
+  background-image: url(./imagenes/rsz_priscilla-du-preez-l3lznprpzbi-unsplash.jpg);
+  color: white;
+  background-size: cover; /*redimenciona la imagen dependiendo del tamaño de la pantalla*/
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.6); /*le voy a poner negro poniendo todo en 0 pero la opacidad en vez de 1 p q sea todo negro le voy a poner 0.5. Pero todo esto tiene q estar combinado de blend-mode*/
+  background-blend-mode: darken; /*oscurece la imagen de fondo*/
+  padding: 12rem 0 10rem 0;
+}
+.title{
+  font-size: 3rem;
+}
+.cover-small {
+  height: 200px;
+  background-blend-mode: normal;
+}
+/*Tips Ecologicos*/
+.imagen{
+  object-fit: contain;
+}
+.InfoEm {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.texto{
+  padding: 1rem;
+}
+
+.card {
+  border: 1px solid rgb(207, 205, 205) !important; 
+  margin: 1%;
+  border-radius: 5px;
+  width: 400px;/*le decimos cuanto tamaño queremos que ocupen*/
+  flex-shrink: 0;/*y le decimos q no queremos q se redimensionen o sea q NO se achiquen o agranden segun la pantalla, que quede en = tamaño*/
+  margin-right: 1rem; /*p
+  border: 0 !important; /*Si tengo declarado 2 estilos font-size: En condiciones normales, se tiene en cuenta el 2do valor definido, porq lo sobrescribe. Sin embargo, el 1er font-size está definido como !important, entonces se tiene en cuenta este*/
+  /*esto y el de abajo sirve p darle sombra a la tarjeta*/
+  width: 270px; /*para que se vean grandes las tarjetas*/
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06); /*2 sombras q hacen q se vea un poco mejor*/
+}
+/*las imagenes conviene ponerlas como fondo como hice con la primera imagen donde está el título (truco para q queden mejor acomodadas)*/
+.imagen-card{
+  width: 15rem;
+}
+.card-title {
+  min-height: 4rem; /* 2.5 × 16px(porq en font-size de html es 16px, es el padre) = 40px, esto es muy util en diseño responsivo, si lo pongo en px tengo q estar cambiando uno por uno según la pantalla donde se vea la pag. web */
+} /*para q lo escrito en las tarjetas tambien esten alineadas hago esto*/
+
+.card-text {
+  min-height:5.5rem; /*estaba en 7rem lo modifiqué p achicar un poco las tarjetas*/
+}
+.card-body{
+  padding: 3%;
+  text-align: center;
+}
+
+/*COMENTARIO*/
+.containerD{
+  padding: 2%;
+}
+/*estilo de TIRA DE PRODUCTOS*/
+.product-stripe, .slider{
+  overflow-x: scroll; /*propiedad que muestra como se va a ver el contenido q se está desbordando, si se ve inspeccionar se va a notar q las tarjetitas se están "saliendo" del producto-stripe. Lo q hace "hidden" es ocultar el contenido y quita el scroll. queremos "scroll" q agrega una "barra" p q se pueda ver desplazando la barra*/
+  padding-top: 1rem; /*le agrego los padding p q se vea mejor arriba y abajo;*/
+  padding-bottom:1rem;
+}/*hay un overflow-x q es p lo q se desborda en la parte horiz y -y p lo q se desborda en la parte vertical*/  
+
+.stripe-container, .slider-container{
+ display: flex; /*esto lo hace un contenedor de flex-box p q podamos nosotros ponerles el orden q querramos*/
+}/*se encogen los elementos lo mas posible p q ocupen el menor espacio*/
+
+.stripe-container .card {
+  width: 300px;/*le decimos cuanto tamaño queremos que ocupen*/
+  flex-shrink: 0;/*y le decimos q no queremos q se redimensionen o sea q NO se achiquen o agranden segun la pantalla, que quede en = tamaño*/
+  margin-right: 1rem; /*para q haya mas espacio entre ellos*/
+}/*mi tira de productos hasta aca abarca todo lo q necesita de espacio p hacer q solo haya scroll en la tira de imagenes voy a usar el div: product-stripe (arriba)*/
+
+.card-text2 {
+  min-height:8rem; /*estaba en 7rem lo modifiqué p achicar un poco las tarjetas*/
+}
+.btn{
+  display: inline-block;
+  padding: 0.1rem 2rem;
+  text-decoration: none;
+  color: rgb(19, 119, 119);
+  margin: 4px;
+  font-size: 1.2rem;
+  text-shadow: 3px 5px 4px rgb(90, 80, 90);
+  transition: transform 0.3s ease-out;
+}
+/*Media queries*/ 
+@media (max-width: 900px) {
+    
+  .InfoEm {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      padding: 1rem;
+    }
+    .texto{
+      padding: 0.5rem;
+      text-align: center;
+    }
+    li{
+      display: block;
+      margin: 0.6rem;
+    }
+    .navbar{
+        flex-direction: column; /*funciona al poner display block, pero tapa todo ver*/
+        position:relative;
+      }
+    ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }

@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost:wght@700&display=swap');
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 20px;/*se pone 16px o 100%, 100%-->16px.*/
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; /*para sacarle los margenes y paddings q vienen en html por defecto*/  
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif; /*fuente elegida en googlefonts*/
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: fixed; /*dejo el menu fijo mientras navego en la pag*/
+  background-color: rgb(129, 188, 177);
+  text-align: center;
+  z-index: 10; /*lo tuve que poner porq se iba abajo de las fotos*/
+  width: 100%; /*p q abarque toda la pag*/
+}
+.logo{
+  margin: 0.1rem 0 0 0.3rem;
+}
+.navbar a {
+  color: aliceblue;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(129, 188, 177)
+}
+.nav a:hover {
+  color: rgb(82, 29, 84);
+}
+
+h1, h5{
+  font-family: 'Jost', sans-serif; 
+}
+
+p{
+  font-size: 0.9rem;
+}
+
+ul{
+  list-style-type: none;
+  margin: 1.6rem;
+  padding: 0;
+}
+
+li{
+  display: inline;
+  float:inline-end;
+  margin: 1rem;
+}
+/*Caja de 400px es el titulo principal*/
+.cover {
+  display: grid;
+  place-items: center;
+  background-image: url(./imagenes/rsz_anna-oliinyk-ncppmv69m1s-unsplash.jpg);
+  color: white;
+  background-size: cover; /*redimenciona la imagen dependiendo del tamaño de la pantalla*/
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.6); /*le voy a poner negro poniendo todo en 0 pero la opacidad en vez de 1 p q sea todo negro le voy a poner 0.5. Pero todo esto tiene q estar combinado de blend-mode*/
+  background-blend-mode: darken; /*oscurece la imagen de fondo*/
+  padding: 12rem 0 10rem 0;
+}
+.title{
+  font-size: 3rem;
+}
+
+/*Presentacion de la empresa*/
+.imagen{
+  object-fit: contain;
+}
+.InfoEm {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.texto{
+  padding: 1rem;
+}
+/*estilo de TIRA FOTOS*/
+.slider-container{
+  display: flex; /*esto lo hace un contenedor de flex-box p q podamos nosotros ponerles el orden q querramos*/
+ }/*se encogen los elementos lo mas posible p q ocupen el menor espacio*/
+ .image-container{
+  width: 100%;
+  padding-top: 56%; /*otra vez p preservar el 16:9*/
+  background-size: cover; /*p q lo dimensione apropiadamente*/
+  background-position: center;
+  flex-shrink:0; /*p q las imagenes q voy poniendo no traten de "competir". MDN: flex-shrink especifica el factor de contracción de un flex item. Los flex items se encogerán para llenar el contenedor de acuerdo a su número flex-shrink , cuando el tamaño por defecto de los flex items sea mayor al de su contenedor flex container.*/  
+}
+.centrate{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(195, 241, 232)
+}
+.slider{
+  width: 40rem;
+  overflow-x:hidden; /*no va a tener el scroll porq no va a hacer una tira sino un slider, voy a ocultar lo demás*/
+}
+.slider-container{
+  transform:translateX(0); /*ESTO VA A HACER Q SE TRASLADE A CADA IMAGEN, lo q hago es ir cambiando la posición de X()*/
+  animation: slider 15s infinite;  /*1ero: pongo el nombre de la animación, 2do: cuanto va a durar, 3ero: p q la animacion se vuelva a repetir pongo "infinite"*/
+} /*PARA Q SE TRASLADE DE UNA IMAGEN A OTRA: se va a usar algo q se llama ANIMACIONES en CSS*/
+
+/*Eco shop y Eco tips-CARDS*/
+.containerC, .containerF{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 15px;
+}
+.card {
+  border: 1px solid rgb(207, 205, 205) !important; 
+  margin: 1%;
+  border-radius: 5px;
+  width: 400px;/*le decimos cuanto tamaño queremos que ocupen*/
+  flex-shrink: 0;/*y le decimos q no queremos q se redimensionen o sea q NO se achiquen o agranden segun la pantalla, que quede en = tamaño*/
+  margin-right: 1rem; /*para q haya mas espacio entre ellos*/
+}/*mi tira de productos hasta aca abarca todo lo q necesita de espacio p hacer q solo haya scroll en la tira de imagenes voy a usar el div: product-stripe (arriba)*/
+.imagen-card{
+  width: 20rem;
+}
+.card-title {
+  min-height: 1.5rem; /* 2.5 × 16px(porq en font-size de html es 16px, es el padre) = 40px, esto es muy util en diseño responsivo, si lo pongo en px tengo q estar cambiando uno por uno según la pantalla donde se vea la pag. web */
+} /*para q lo escrito en las tarjetas tambien esten alineadas hago esto*/
+
+.card-text {
+  min-height:4rem; /*estaba en 7rem lo modifiqué p achicar un poco las tarjetas*/
+}
+.card-body{
+  padding: 3%;
+  text-align: center;
+}
+
+/*MAPA*/
+.containerD, .equipo{
+  padding: 2%;
+}
+.responsive-iframe iframe { /*Lo q esto esta diciendo es aplicaselo al iframe dentro del contenedor responsive iframe*/
+  position:relative;
+  top:0;
+  left:0;
+  width: 60%;
+  display: block; /*uso esto y margin para centrar el mapa*/
+  margin: 0 auto;
+}/*y esto va a hacer q este mapa efectivamente crezca o se achique pero siempre manteniendo la proporcion 16:9*/
+
+/*Presentacion EQUIPO*/
+.cardA {
+  border: 1px solid rgb(207, 205, 205) !important; 
+  margin: 1%;
+  border-radius: 5px;
+  width: 240px;/*le decimos cuanto tamaño queremos que ocupen*/
+  flex-shrink: 0;/*y le decimos q no queremos q se redimensionen o sea q NO se achiquen o agranden segun la pantalla, que quede en = tamaño*/
+}
+.avatar {
+  width:240px;
+  height:230px;
+  background-size: cover;
+  background-position:center;
+  margin: 0 auto;/*forma de centrar el avatar: display:inline-block; sino con margin: 0 auto*/
+}
+/*LINKS de contacto*/
+#contact {
+  display: flex;
+  justify-content: center;
+  background: rgb(245, 217, 222);
+  padding: 0.5rem;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  flex-wrap: wrap;
+}
+.contact-details {
+  font-size: 1.2rem;
+  text-shadow: 3px 5px 4px rgb(90, 80, 90);
+  transition: transform 0.3s ease-out;
+}
+.btn {
+  display: inline-block;
+  padding: 0.1rem 2rem;
+}
+.contact-links a {
+  text-decoration: none;
+  color: rgb(19, 119, 119);
+  margin: 4px;
+}
+/*ANIMACION(copiada de otra pagina) slider(ya definida en slider-content): serie de pasos que se siguen, respecto a la animacion que se puso en .slider-container*/
+@keyframes slider { /*CARRUSEL DE IMAGENES*/
+  0%{ /*le digo inicialmente propiedades*/
+    transform:translateX(0);
+  } 
+  20%{ /* le pongo el translateX(0) p q se mantenga mas tiempo sobre la primer imagen*/
+    transform:translateX(0);
+  }
+  25%{ /*p q pase a la segunda imagen*/
+    transform:translateX(-100%);
+  }  
+  45% {/*otra vez le pongo p q se mantenga en la 2da imagen*/
+    transform:translateX(-100%);
+  }
+  50% {
+    transform:translateX(-200%);
+  }
+  70% {
+    transform:translateX(-200%);
+  }
+  75%{
+    transform:translateX(-300%);
+  } 
+  95%{/*y al final estas otras*/
+    transform:translateX(-300%);
+  }
+  100%{
+    transform:translateX(0);
+  }  
+}/*CSS lo q va a hacer es un cambio progresivo en vez de cambiarlos de golpe*/
+
+/*Media queries*/
+@media (max-width: 400px){
+.cardA {
+  border: 1px solid rgb(207, 205, 205) !important; 
+  margin: 2%;
+  border-radius: 5px;
+  width: 5rem;/*le decimos cuanto tamaño queremos que ocupen*/
+  flex-shrink: 0;/*y le decimos q no queremos q se redimensionen o sea q NO se achiquen o agranden segun la pantalla, que quede en = tamaño*/
+}
+.avatar {
+  width:4.5rem;
+  height:4.5rem;
+  background-size: cover;
+  background-position:center;
+  margin: 0 auto;/*forma de centrar el avatar: display:inline-block; sino con margin: 0 auto*/
+  }
+}
+@media (max-width: 700px) {
+  li{
+    display: block;
+    margin: 0.6rem;
+  }
+  .navbar{
+      flex-direction: column; /*funciona al poner display block, pero tapa todo ver*/
+      position:relative;
+    }
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+} 
+@media (max-width: 900px) {
+.InfoEm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  .texto{
+    padding: 0.5rem;
+    text-align: center;
+  }
+}

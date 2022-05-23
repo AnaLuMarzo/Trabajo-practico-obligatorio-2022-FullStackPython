@@ -1,0 +1,136 @@
+/* Fuente de google */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost:wght@700&display=swap');
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+  
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; /*para sacarle los margenes y paddings q vienen en html por defecto*/  
+}
+
+/* adjust typography defaults */
+body {
+  background-image: linear-gradient(90deg, rgba(0, 70, 58, 0.8), rgba(0, 80, 40, 0.7) ),url(./imagenes/rsz_mads-schmidt-ti-jidxqk3c-unsplash.jpg);
+  font-family: 'Josefin Sans', sans-serif !important; 
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: fixed; /*dejo el menu fijo mientras navego en la pag*/
+  background-color: rgb(129, 188, 177);
+  text-align: center;
+  z-index: 10; /*lo tuve que poner porq se iba abajo de las fotos*/
+  width: 100%; /*p q abarque toda la pag*/
+}
+.logo{
+  margin: 0.1rem 0 0 0.3rem;
+}
+.navbar a {
+  color: aliceblue;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(129, 188, 177)
+}
+.nav a:hover {
+  color: rgb(82, 29, 84);
+}
+
+h1, h5{
+  font-family: 'Jost', sans-serif; 
+  color: aliceblue;
+}
+
+p{
+  font-size: 0.9rem;
+  color: aliceblue;
+}
+
+ul{
+  list-style-type: none;
+
+  padding: 0;
+}
+
+li{
+  display: inline;
+  float:inline-end;
+  margin: 0rem 0.1rem;
+}
+
+.cover {
+  color: white;
+  background-size: cover; /*redimenciona la imagen dependiendo del tamaño de la pantalla*/
+  }
+
+.bajar{
+  padding-top: 8rem;
+}
+
+header{
+  text-align: center;
+  }
+
+form {
+    display: block;
+    margin-top: 0em; 
+ }
+
+#survey-form {
+  background: #218c74;
+  padding: 20px 30px;
+ /*le agrego esto p que sea responsivo y p centrar el formulario:*/
+  width: 100%; /*p q abarque todo el ancho correspodiente a su div contenedor. Esto es sobre todo p q ocupe todo el espacio en pantallas pequeñas*/
+  max-width: 600px; /*p q en pantallas más grandes el formulario no se estire demasiado y matenga sus elementos no ocupen todo el espacio disponible*/
+  margin: 0 auto; /*par centrar el formulario: cuadrado verde y lo q está adentro*/
+  display: flex; /*Usando flexbox alineamos los elementos tanto los input como el botón uno abajo del otro y centrandolos dentro del formulario para poner los elementos uno abajo del otro y centrar los inputs dentro del form.*/
+  flex-direction: column;
+  justify-content: center;
+  aspect-ratio: 2px;
+ }
+
+.form-group {
+    margin: 0.3rem 0.2rem;
+    padding: 0.1rem;
+  color: white;
+}
+
+label {
+    align-items: center;
+    font-size: 1.12rem;
+    margin-bottom: 0.4rem;
+}
+footer{
+  color: antiquewhite;
+}
+
+@media (min-width: 480px) {
+    form {
+    padding: 2.5rem;
+      }
+}
+@media (max-width: 700px) {
+  li{
+    display: block;
+    margin: 0.6rem;
+  }
+  .navbar{
+      flex-direction: column; /*funciona al poner display block, pero tapa todo ver*/
+      position:relative;
+    }
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .bajar{
+    padding-top: 2rem;
+  }
+} 

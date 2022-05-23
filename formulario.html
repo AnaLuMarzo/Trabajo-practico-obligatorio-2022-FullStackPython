@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./imagenes/Mi_guia_eco-removebg-preview.png"/>
+
+    <title>Formulario de Conciencia Ecologica</title>
+
+    <!-- linkeo la pagina de bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./estilos_formulario.css" />
+  </head>
+
+  <body>
+      <header>
+         <!-- esta es la barra de navegacion-->
+         <nav class="navbar">        
+          <div class="logo"><a href="./index.html"><img
+           src="./imagenes/Mi guia eco.png"
+           alt="productos naturales varios en frascos de vidrio y bolsas de tela"
+           height="80"
+           class="logo"
+         /></a></div>
+          <!--Barra de navegacion -->
+        <ul class="nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Inicio</a> <!--me devuelve a la página principal poniendo la /-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Ubicación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./tips eco.html">Tips Eco/Shop</a> <!--esto se lo llama LINKS RELATIVO: porq sin importar en q dominio estén son relativos al documento actual y siempre van a funcionar, los otros son ABSOLUTOS: cuando se coloca toda la direccion de la pág web si esta se mueve tendríamos q cambiar todo el link por completo-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Contacto</a> <!--esto se lo llama LINKS RELATIVO: porq sin importar en q dominio estén son relativos al documento actual y siempre van a funcionar, los otros son ABSOLUTOS: cuando se coloca toda la direccion de la pág web si esta se mueve tendríamos q cambiar todo el link por completo-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Nosotros</a> 
+            <li class="nav-item">
+              <a class="nav-link" href="formulario.html">Formulario</a>
+            </li>
+          </li>
+        </ul>
+      </nav>
+        
+         <!-- comienzo del contenido-->
+        <div
+          class="d-flex justify-content-center align-items-center flex-column mb-4 bajar">
+          <h1 id="title">
+            Formulario de Contacto y Opinión
+          </h1>
+          <p id="description" class="">
+            <em>Gracias por tu interes en realizar este Formulario</em>
+            <br/> <!--para hacer salto de linea-->
+            <em>Nos va a ayudar a conocer lo que las personas saben sobre una vida e ecologica.</em>
+          </p>
+        </div>
+      </header>
+
+      <!--FORMULARIO-->
+      <form  id="survey-form" class="rounded-3" method="post">
+             <!--Nombre-->
+        <div name="myForm" class="form-group">
+          <label for="name" id="name-label">Nombre completo</label>
+          <input
+            type="text"
+            name="Nombre completo"
+            id="name"
+            class="form-control"
+            placeholder="Ingrese su nombre completo"
+            required
+          />
+        </div>
+        <!--Poner email-->
+        <div class="form-group">
+          <label for="email" id="email-label">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="ingrese su correo electrónico"
+            required
+          />
+        </div>
+ <!--Poner la edad-->
+        <div class="form-group">
+          <label id="number-label">Edad<span id="passwordHelpInline" class="form-text form-group">(Opcional)</span>
+          </label>
+          <input
+            type="number"
+            name="edad"
+            id="number"
+            min="15"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+          <p id="demo"></p>
+        </div>
+        <div class="form-group">
+          <label id="select-label">Seleccione el rol correspondiente</label>
+          <select id="dropdown" class="form-select" aria-label="Default select example" required>
+            <option selected> Seleccionar alguna de las opciones</option>
+            <option value="student">Estudiante</option>
+            <option value="full">Trabajo Full time</option>
+            <option value="part">Trabajo Part time</option>
+            <option value="PreferNot">Prefiero no decir</option>
+            <option value="other">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label id="select">
+            Recomendaria "Mi Guia Eco"?</label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1" checked
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Seguramente
+            </label>
+          </div>
+          
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+              
+            />
+            <label class="form-check-label" for="flexRadioDefault2">
+              Tal vez
+            </label>
+          </div>
+          
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault3"
+              
+            />
+            <label class="form-check-label" for="flexRadioDefault2">
+              No estoy seguro/a
+            </label>
+          </div>
+        </div>
+       
+        <div class="form-group">
+          <label id="select-label2">
+            Que te gusta de "My Guia Eco"?<span class="clue"></span
+          ></label>
+          <select id="most-like" class="form-select" aria-label="Default select example">
+            <option selected> Seleccionar alguna de las opciones</option>
+            <option value="1">Eco Tips</option>
+            <option value="2">Eco Shop</option>
+            <option value="3">Reciclables</option>
+            <option value="4">Otro</option>
+          </select>
+        </div>
+      
+        <div class="form-group">
+          <label id="select-label3">
+            ¿Que acciones realiza para reducir su impacto ambiental? <span class="clue"><small>(Check all that apply)</small> </span
+          ></label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">Compostar <small><em>(Juntar residuo orgánico y dejar que se descomponga después de un tiempo)</em></small>
+           </label>
+          </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+          <label class="form-check-label" for="flexCheckChecked">Eco-botellas <small><em>(llenar una botella de plastico recicable con residuos de plastico)</em></small>
+          </label>
+        </div>
+          
+          <div class="form-check">
+           <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+           <label class="form-check-label" for="flexCheckChecked">Comida Orgánica <small><em>(Vegetales y frutas sin pesticidas)</em></small>
+           </label>
+          </div>
+          
+          <div class="form-check">
+           <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+           <label class="form-check-label" for="flexCheckChecked">Productos libres de plastico <small><em>(Productos en envases de vidrio, etc.)</em></small>
+           </label>
+          </div>
+          <div class="form-check">
+           <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked4">
+           <label class="form-check-label" for="flexCheckChecked">Productos libres de Crueldad animal <small></small>
+           </label>
+          </div>
+        
+ <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked5">
+  <label class="form-check-label" for="flexCheckChecked">
+    Productos libre de contaminantes <small><em>(Productos libre de parabenos, aluminio, fluor, etc.)</em></small>
+  </label>
+ </div>
+      
+ <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked6">
+  <label class="form-check-label" for="flexCheckChecked">
+    Reciclar <small><em>(Llevar los residuos reciclables a diferentes puntos de reciclaje)</em></small>
+   </label>
+  </div>
+        </div>
+        
+   <div class="form-group mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">¿Algún comentario o sugerencia?</label>
+     <textarea id="comments" class="form-control" name="comments" rows="3" placeholder="Ingrese su comentario aquí..."></textarea>
+        </div>
+     <div class="d-grid gap-2">  
+      <button type="button" onclick="myFunction()" class="btn btn-primary form-group">Enviar</button>
+       </div>   
+  </form>
+
+    <div id="error"></div>
+
+      <script src="./JS/main.js"></script>
+     </body>
+     <br>
+     <footer class="">
+      <p>Derechos reservados 2022-Ana Lucia Marzocca</p>
+    </footer>
+</html>

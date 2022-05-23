@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./imagenes/Mi_guia_eco-removebg-preview.png"/>
+
+    <title>Tips Eco y Eco Shop</title>
+    <!-- linkeo el archivo de estilos -->
+    <link rel="stylesheet" href="./estilos_tipsEco.css" />
+  </head>
+  <body>
+    <header>          
+      <!-- Logo arriba izq-->
+    <nav class="navbar">        
+       <div class="logo"><a href="./index.html"><img
+        src="./imagenes/Mi guia eco.png"
+        alt="productos naturales varios en frascos de vidrio y bolsas de tela"
+        height="80"
+        class="logo"
+      /></a></div>
+      
+      <!--Barra de navegacion -->
+      <ul class="nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Inicio</a> <!--me devuelve a la página principal poniendo la /-->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Ubicación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./tips eco.html">Eco Tips/Shop</a> <!--esto se lo llama LINKS RELATIVO: porq sin importar en q dominio estén son relativos al documento actual y siempre van a funcionar, los otros son ABSOLUTOS: cuando se coloca toda la direccion de la pág web si esta se mueve tendríamos q cambiar todo el link por completo-->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Contacto</a> <!--esto se lo llama LINKS RELATIVO: porq sin importar en q dominio estén son relativos al documento actual y siempre van a funcionar, los otros son ABSOLUTOS: cuando se coloca toda la direccion de la pág web si esta se mueve tendríamos q cambiar todo el link por completo-->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Nosotros</a> 
+          <li class="nav-item">
+            <a class="nav-link" href="formulario.html">Formulario</a>
+          </li>
+        </li>
+      </ul>
+    </nav>
+      <!--div: se usa para agrupar elementos, justify p q centre los contenidos en el eje x, align en el eje y y flex-column p q se pongan uno abajo del otro-->
+      <div class="cover">
+        <h1 class="title">
+          Eco Tips y Eco Shop
+        </h1>
+        <br>
+        <p>
+          Los mejores tips y consejos Ecológicos y las mejores Eco ofertas para vos!
+        </p>
+      </div>
+    </header>
+
+      <!--Consejos ecologicos-->
+      <section>
+        <div class="containerA InfoEm">
+          <img
+            src="./imagenes/rsz_viktor-talashuk-a7ducc6kd90-unsplash.jpg"
+            alt="productos naturales varios en frascos de vidrio y bolsas de tela"
+            height="250"
+            class="imagen"
+          />
+          <div class="texto">
+            <h2>Reciclar y reutilizar</h2>
+            <br>
+            <p>
+              Reutilizar: encontrar nuevas formas de utilizar los objetos para que no se tiren a la basura. Reciclar: convertir los objetos que ya no necesitamos en otros nuevos que se puedan volver a utilizar.
+              ¿qué es mejor, reciclar o reutilizar? El objetivo de ambos procesos es el mismo: reducir el impacto de la actividad humana a nivel ecológico y sobre el medio ambiente, pues los recursos son finitos, y generar menos residuos. Ambas opciones son, por lo tanto, igual de válidas y se pueden aplicar en distintas situaciones. Si surge una necesidad concreta en el hogar, la reutilización puede ser una buena solución.
+          </p>
+          </div>  
+        </div>
+      </section>
+
+      <section>
+        <div class="containerA InfoEm">
+          <img
+            src="./imagenes/rsz_dan-cristian-padure-miyzdphuyy0-unsplash.jpg"
+            alt="productos naturales varios en frascos de vidrio y bolsas de tela"
+            height="250"
+            class="imagen"
+          />
+          <div class="texto">
+            <h2>Compostage</h2>
+            <br>
+            <p>
+              El compostaje es un proceso de transformación de la materia orgánica para obtener compost, un abono natural. Esta transformación se lleva a cabo en cualquier casa mediante un compostador, sin ningún tipo de mecanismo, ningún motor ni ningún gasto de mantenimiento.             La basura diaria que se genera en los hogares contiene un 40% de materia orgánica, que puede ser reciclada y retornada a la tierra en forma de humus para las plantas y cultivos. De cada 100kg de basura orgánica se obtienen 30 kg de compost.
+              De esta manera se contribuye a la reducción de las basuras que se llevan a los vertederos o a las plantas de valorización. al mismo tiempo se consigue reducir el consumo de abonos químicos.
+              Por otro lado, cabe también destacar que con el compostaje doméstico se emiten 5 veces menos gases de efecto invernadero que el compostaje industrial para tratar la misma cantidad de restos de cocina y jardín.
+          </p>
+          </div>
+           
+        </div>
+      </section>
+
+    <section>
+      <div class="containerD">
+        <div class="row">
+          <!--es lo del sistema de grillas-->
+          <div class="">
+            <h4>
+              Cambia tu estilo de vida a uno mas ecológico!
+            </h4>
+            <br>
+            <p>Navega por nuestra página web y descubre como lograrlo.</p>
+            
+          </div>
+        </div> 
+        
+      </div>
+    </section>
+    <!--   TIRA DE PRODUCTOS   -->
+    <section>
+      <div class="container" id="stripe">
+        <div class="product-stripe">
+          <div class="stripe-container">
+            <!--necesito 3 div y dentro va la tira de productos-->
+            <!--similar a lo q se hizo en cards, asi q copio y pego-->
+            <div class="card">
+            <img class="imagen-card" src="./imagenes/rsz_superkitina-rct928gibom-unsplash.jpg"  alt="Card imagen" >
+              <div class="card-body">
+                <h5 class="card-title">Box nº1: productos de higiene bucal</h5>
+                <span>$1400</span>
+                <br>
+                <p class="card-text2">
+                  <strong>Contiene:</strong> 2 (dos) cepillos de bambú, pasta
+                  dental ecológica, hilo dental vegetal, portacepillo de bambú.
+                </p>
+                <a href="#" class="btn">Comprar</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="imagen-card" src="./imagenes/rsz_inciclo-zh7mrqssarq-unsplash.jpg"  alt="Card imagen">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Box nº2: productos de higiene femenina
+                </h5>
+                <span>$2500</span>
+                <p class="card-text2">
+                  <strong>Contiene:</strong> 1 (una) Copita menstrual, 2 (dos)
+                  toallas y 2 (dos) toallitas de tela, unguento menstrual, bolsa
+                  relajante, bolsita de tela para guardas productos.
+                </p>
+                <a href="#" class="btn">Comprar</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="imagen-card" src="./imagenes/rsz_aurelia-dubois-6j0musms4fq-unsplash.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Box nº3: productos de baño</h5>
+                <span>$1800</span>
+                <p class="card-text2">
+                  <strong>Contiene:</strong> un jabón vegetal, un shampoo y un
+                  enjuague sólido, una jabonera de bambú, una esponga vegetal y
+                  una afeitadora metálica con 6 (seis) hojas.
+                </p>
+                <a href="#" class="btn">Comprar</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <img class="imagen-card" src="./imagenes/rsz_safia-shakil-hluyfijgytm-unsplash.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Box nº4: productos faciales</h5>
+                <span>$2600</span>
+                <p class="card-text2">
+                  <strong>Contiene:</strong> gel de limpieza facial, toallitas
+                  desmaquillantes, crema nutritiva, bálsamo labial, cerum para
+                  pestañas y una mascarilla facial.
+                </p>
+                <a href="#" class="btn">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <br>
+    <p>Derechos reservados 2022-Ana Lucia Marzocca</p>
+  <br>
+  </footer>
+</html>
