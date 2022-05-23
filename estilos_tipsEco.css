@@ -158,6 +158,37 @@ p{
   text-shadow: 3px 5px 4px rgb(90, 80, 90);
   transition: transform 0.3s ease-out;
 }
+
+/*LINKS de contacto*/
+#contact {
+  display: flex;
+  justify-content: center;
+  background: rgb(245, 217, 222);
+  padding: 0.5rem;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  flex-wrap: wrap;
+}
+.contact-details {
+  font-size: 1.2rem;
+  text-shadow: 3px 5px 4px rgb(80, 90, 90);
+  transition: transform 0.3s ease-out;
+}
+.btn {
+  display: inline-block;
+  padding: 0.1rem 2rem;
+}
+.contact-links a {
+  text-decoration: none;
+  color: rgb(19, 119, 119);
+  margin: 4px;
+}
+
+
 /*Media queries*/ 
 @media (max-width: 900px) {
     
