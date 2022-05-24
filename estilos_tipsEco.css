@@ -74,10 +74,7 @@ p{
 .title{
   font-size: 3rem;
 }
-.cover-small {
-  height: 200px;
-  background-blend-mode: normal;
-}
+
 /*Tips Ecologicos*/
 .imagen{
   object-fit: contain;
@@ -202,6 +199,7 @@ p{
     margin: 0;
     padding: 0;
   }
+  
 } 
 
 
