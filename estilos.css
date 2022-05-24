@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost:wght@700&display=swap');
 
-/* default to border-box */
 html {
   box-sizing: border-box;
   font-size: 20px;/*se pone 16px o 100%, 100%-->16px.*/
@@ -67,7 +66,7 @@ li{
   color: white;
   background-size: cover; /*redimenciona la imagen dependiendo del tamaño de la pantalla*/
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.6); /*le voy a poner negro poniendo todo en 0 pero la opacidad en vez de 1 p q sea todo negro le voy a poner 0.5. Pero todo esto tiene q estar combinado de blend-mode*/
+  background-color: rgba(0, 0, 0, 0.6); /*le puse opacidad a la foto, tiene q estar combinado de blend-mode*/
   background-blend-mode: darken; /*oscurece la imagen de fondo*/
   padding: 12rem 0 10rem 0;
 }
