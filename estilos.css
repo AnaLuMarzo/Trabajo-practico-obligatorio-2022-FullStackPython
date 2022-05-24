@@ -145,6 +145,16 @@ li{
   padding: 3%;
   text-align: center;
 }
+.btn{
+  display: inline-block;
+  padding: 0.1rem 2rem;
+  text-decoration: none;
+  color: rgb(19, 119, 119);
+  margin: 4px;
+  font-size: 1.2rem;
+  text-shadow: 3px 5px 4px rgb(90, 80, 90);
+  transition: transform 0.3s ease-out;
+}
 
 /*MAPA*/
 .containerD, .equipo{
