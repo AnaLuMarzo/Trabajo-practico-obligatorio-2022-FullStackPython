@@ -250,7 +250,7 @@ li{
   margin: 0 auto;/*forma de centrar el avatar: display:inline-block; sino con margin: 0 auto*/
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 955px) {
   li{
     display: block;
     margin: 0.6rem;
@@ -272,10 +272,7 @@ li{
   .title{
     font-size: 2rem;
   }
-} 
-@media (max-width: 900px) {
- 
-/*info empresa*/ 
+  /*info empresa*/ 
 .InfoEm {
     display: flex;
     flex-direction: column;
@@ -287,4 +284,5 @@ li{
     padding: 0.5rem;
     text-align: center;
   }
-}
+} 
+
