@@ -263,6 +263,14 @@ li{
     margin: 0;
     padding: 0;
   }
+  .cover {
+  display: grid;
+  place-items: center;
+  padding: 10rem 0.5rem 10rem 0.5rem;
+  }
+  .title{
+    font-size: 2rem;
+  }
 } 
 @media (max-width: 900px) {
 .InfoEm {
