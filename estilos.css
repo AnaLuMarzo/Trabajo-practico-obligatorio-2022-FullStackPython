@@ -274,39 +274,7 @@ li{
   }
 } 
 @media (max-width: 900px) {
-  /*Barra de navegacion*/
-.navbar{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  position: fixed; /*dejo el menu fijo mientras navego en la pag*/
-  background-color: rgb(129, 188, 177);
-  text-align: center;
-  z-index: 10; /*lo tuve que poner porq se iba abajo de las fotos*/
-  width: 100%; /*p q abarque toda la pag*/
-}
-.logo{
-  margin: 0.1rem 0 0 0.1rem;
-}
-.navbar a {
-  text-align: center;
-  background-color: rgb(129, 188, 177)
-}
-p{
-  font-size: 0.9rem;
-}
-ul{
-  list-style-type: none;
-  margin: 0.2rem;
-  padding: 0;
-}
-li{
-  display: inline;
-  float:inline-end;
-  margin: 0.2rem;
-}
-  
+ 
 /*info empresa*/ 
 .InfoEm {
     display: flex;
