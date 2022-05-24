@@ -6,10 +6,10 @@ error.style.color='red'
 function myFunction() {
     // Toma el valor del campo input con el id="number"
     let x = document.getElementById("number").value;
-    // Si x no es un numero o no es menor a 120 o no es mayor a 15, es un numero invalido
+    
     let text;
 
-    if (isNaN(x) || x < 120 || x > 15) {
+    if (isNaN(x) || x > 120 || x < 15) {// Si x no es un numero o no es menor a 120 o no es mayor a 15, es un numero invalido
       text = "Ingreso no valido";
 
     } else {
